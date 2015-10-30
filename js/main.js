@@ -51,8 +51,6 @@ fInitDom = function() {
         return ( oCurrentWindow.isMaximized() ? oCurrentWindow.unmaximize() : oCurrentWindow.maximize() ) && false;
     } );
 
-    console.log( "DOM is ready." );
-
     oCurrentWindow.show();
 };
 

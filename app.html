@@ -15,79 +15,75 @@
             </div>
             <h1>Siveye</h1>
         </header>
-        <form action="javascript:void(0);">
-            <fieldset class="main-parameters">
-                <div class="server-selection">
-                    <label for="server-selector">server:</label>
-                    <div class="holder">
-                        <select id="server-selector">
-                            <option value="a.root-servers.net">DNS Root Servers A</option>
-                            <option value="b.root-servers.net">DNS Root Servers B</option>
-                            <option value="google-public-dns-a.google.com">Google Primary DNS</option>
-                            <option value="google-public-dns-b.google.com">Google Secondary DNS</option>
-                            <option value="208.67.222.222">OpenDNS Primary DNS</option>
-                            <option value="208.67.220.220">OpenDNS Secondary DNS</option>
-                            <option value="127.0.0.1">Localhost</option>
-                        </select>
-                        <input id="server-input" type="text" placeholder="hostname or IP" />
+        <main>
+            <form action="javascript:void(0);">
+                <fieldset>
+                    <div class="server-selection">
+                        <label for="server-selector">server:</label>
+                        <div class="holder">
+                            <select id="server-selector">
+                                <option value="a.root-servers.net">DNS Root Servers A</option>
+                                <option value="b.root-servers.net">DNS Root Servers B</option>
+                                <option value="google-public-dns-a.google.com">Google Primary DNS</option>
+                                <option value="google-public-dns-b.google.com">Google Secondary DNS</option>
+                                <option value="208.67.222.222">OpenDNS Primary DNS</option>
+                                <option value="208.67.220.220">OpenDNS Secondary DNS</option>
+                                <option value="127.0.0.1">Localhost</option>
+                            </select>
+                            <input id="server-input" type="text" placeholder="hostname or IP" />
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="graphs">
+                <div class="holder"></div>
+            </div>
+            <div class="results">
+                <div class="packets-stats">
+                    <div class="total">
+                        <span>packets sent</span>
+                        <strong>0</strong>
+                    </div>
+                    <div class="received">
+                        <span>packets received</span>
+                        <strong>0</strong>
+                    </div>
+                    <div class="lost">
+                        <span>packets lost</span>
+                        <strong>0</strong>
+                    </div>
+                    <div class="percent">
+                        <span>success rate</span>
+                        <strong>0 %</strong>
                     </div>
                 </div>
-                <div class="amount-selection">
-                    <label for="amount-selector">requests:</label>
-                    <div class="holder">
-                        <input id="amount-input" type="number" min="0" />
+                <div class="tools">
+                    <div class="main-button">
+                        <a href="javascript:void(0);" id="toggle-process">
+                            start
+                        </a>
                     </div>
                 </div>
-            </fieldset>
-        </form>
-        <div class="graphs">
-            <div class="holder"></div>
-        </div>
-        <div class="results">
-            <div class="packets-stats">
-                <div class="total">
-                    <span>packets sent</span>
-                    <strong>0</strong>
-                </div>
-                <div class="received">
-                    <span>packets received</span>
-                    <strong>0</strong>
-                </div>
-                <div class="lost">
-                    <span>packets lost</span>
-                    <strong>0</strong>
-                </div>
-                <div class="percent">
-                    <span>success rate</span>
-                    <strong>0 %</strong>
+                <div class="ping-stats">
+                    <div class="total">
+                        <span>current</span>
+                        <strong>0 ms</strong>
+                    </div>
+                    <div class="received">
+                        <span>max</span>
+                        <strong>0 ms</strong>
+                    </div>
+                    <div class="lost">
+                        <span>min</span>
+                        <strong>0 ms</strong>
+                    </div>
+                    <div class="percent">
+                        <span>average</span>
+                        <strong>0 ms</strong>
+                    </div>
                 </div>
             </div>
-            <div class="tools">
-                <div class="main-button">
-                    <a href="javascript:void(0);" id="toggle-process">
-                        start
-                    </a>
-                </div>
-            </div>
-            <div class="ping-stats">
-                <div class="total">
-                    <span>current</span>
-                    <strong>0 ms</strong>
-                </div>
-                <div class="received">
-                    <span>max</span>
-                    <strong>0 ms</strong>
-                </div>
-                <div class="lost">
-                    <span>min</span>
-                    <strong>0 ms</strong>
-                </div>
-                <div class="percent">
-                    <span>average</span>
-                    <strong>0 ms</strong>
-                </div>
-            </div>
-        </div>
+        </main>
 
         <script>require( "./js/main.js" );</script>
     </body>
